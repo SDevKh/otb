@@ -32,7 +32,7 @@ export async function generateAIPersonalityAnalysis(data: QuestionnaireData): Pr
   console.log('🤖 Generating AI personality analysis via Node.js backend...');
   
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+    const apiUrl = 'https://otb-server-production.up.railway.app/api';
     const token = localStorage.getItem('authToken');
     
     if (!token) {
@@ -78,7 +78,7 @@ export async function generateAISuccessStrategy(data: QuestionnaireData, persona
   console.log('🎯 Generating AI success strategy via Node.js backend...');
   
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+    const apiUrl = 'https://otb-server-production.up.railway.app/api';
     const token = localStorage.getItem('authToken');
     
     if (!token) {

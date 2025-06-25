@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: [process.env.CLIENT_URL || 'http://localhost:5173', 'https://otb-gix1.vercel.app'],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));

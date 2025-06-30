@@ -74,7 +74,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ isLogin: initialIsLogin = true }) =
 
       console.log('Sending request to', endpoint, 'with payload', payload);
 
-      const response = await fetch(`http://localhost:3001${endpoint}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

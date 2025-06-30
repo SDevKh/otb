@@ -1,4 +1,5 @@
 import { QuestionnaireData } from '../types/questionnaire';
+import { API_BASE_URL } from '../config';
 
 export interface AIPersonalityAnalysis {
   personalityType: string;
@@ -32,7 +33,7 @@ export async function generateAIPersonalityAnalysis(data: QuestionnaireData): Pr
   console.log('🤖 Generating AI personality analysis via Node.js backend...');
   
   try {
-    const apiUrl = 'https://otb-server-production.up.railway.app/api';
+    const apiUrl = API_BASE_URL;
     const token = localStorage.getItem('authToken');
     
     if (!token) {
@@ -78,7 +79,7 @@ export async function generateAISuccessStrategy(data: QuestionnaireData, persona
   console.log('🎯 Generating AI success strategy via Node.js backend...');
   
   try {
-    const apiUrl = 'https://otb-server-production.up.railway.app/api';
+    const apiUrl = API_BASE_URL;
     const token = localStorage.getItem('authToken');
     
     if (!token) {

@@ -1,5 +1,5 @@
 // API service for communicating with the Node.js backend
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://otb-server-production.up.railway.app/api';
+const API_BASE_URL = 'https://otb-server-production.up.railway.app';
 
 interface ApiResponse<T = any> {
   success: boolean;

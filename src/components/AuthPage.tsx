@@ -74,7 +74,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ isLogin: initialIsLogin = true }) =
 
       console.log('Sending request to', endpoint, 'with payload', payload);
 
-      const response = await fetch(`https://otb-server-production.up.railway.app/api${endpoint}`, {
+      const response = await fetch(`https://otb-server-production.up.railway.app${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

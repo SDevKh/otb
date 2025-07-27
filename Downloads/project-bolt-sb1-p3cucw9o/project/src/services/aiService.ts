@@ -1,8 +1,5 @@
 import { QuestionnaireData } from '../types/questionnaire';
-<<<<<<< HEAD
 import { API_BASE_URL } from '../config';
-=======
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
 
 export interface AIPersonalityAnalysis {
   personalityType: string;
@@ -36,11 +33,7 @@ export async function generateAIPersonalityAnalysis(data: QuestionnaireData): Pr
   console.log('🤖 Generating AI personality analysis via Node.js backend...');
   
   try {
-<<<<<<< HEAD
     const apiUrl = API_BASE_URL;
-=======
-    const apiUrl = 'https://otb-server-production.up.railway.app/api';
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
     const token = localStorage.getItem('authToken');
     
     if (!token) {
@@ -86,11 +79,7 @@ export async function generateAISuccessStrategy(data: QuestionnaireData, persona
   console.log('🎯 Generating AI success strategy via Node.js backend...');
   
   try {
-<<<<<<< HEAD
     const apiUrl = API_BASE_URL;
-=======
-    const apiUrl = 'https://otb-server-production.up.railway.app/api';
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
     const token = localStorage.getItem('authToken');
     
     if (!token) {
@@ -501,8 +490,4 @@ function generateIntelligentSuccessStrategy(data: QuestionnaireData, personality
   }
 
   return strategy;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907

@@ -91,10 +91,6 @@ function App() {
         <LandingPage onProceedToLogin={handleProceedToLogin} />
       )}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
       {currentScreen === 'auth' && (
         <AuthPage isLogin={authIsLogin} />
       )}

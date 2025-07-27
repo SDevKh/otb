@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { API_BASE_URL } from '../config';
-=======
 // API service for communicating with the Node.js backend
-const API_BASE_URL = 'https://otb-server-production.up.railway.app';
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
+import { API_BASE_URL } from '../config';
 
 interface ApiResponse<T = any> {
   success: boolean;
@@ -164,8 +160,4 @@ class ApiService {
 }
 
 export const apiService = new ApiService();
-<<<<<<< HEAD
 export default apiService;
-=======
-export default apiService;
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907

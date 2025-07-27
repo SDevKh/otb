@@ -21,11 +21,7 @@ interface AuthPageProps {
 const AuthPage: React.FC<AuthPageProps> = ({ isLogin: initialIsLogin = true }) => {
   const [isLogin, setIsLogin] = useState(initialIsLogin);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [showPassword, setShowPassword] = useState(false); 
-=======
   const [showPassword, setShowPassword] = useState(false);
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -78,11 +74,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ isLogin: initialIsLogin = true }) =
 
       console.log('Sending request to', endpoint, 'with payload', payload);
 
-<<<<<<< HEAD
-      const response = await fetch(`https://otb-server-production.up.railway.app/api${endpoint}`, {
-=======
       const response = await fetch(`https://otb-server-production.up.railway.app${endpoint}`, {
->>>>>>> 73c1e9e62dbd85b2c5261c37dda378bda6bf1907
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -129,13 +129,11 @@ const section3TextRef = useRef<HTMLParagraphElement>(null);
   return (
     <div className="relative min-h-screen bg-black text-white overflow-scroll scrollbar-hide snap-y snap-mandatory" style={{ scrollSnapType: 'y mandatory' }}>
       {/* 🔮 Spline 3D Background */}
-      <iframe
-        src="https://my.spline.design/particlenebula-ZJDdsDD1tjuhHdjPjN0pL6Tz/"
-        frameBorder="0"
-        className="absolute inset-0 w-full h-[44%] z-0 pointer-events-none"
-        allowFullScreen
-      />
-
+      <video className="absolute inset-0 w-full h-[32%] object-cover z-0" autoPlay loop muted>
+        <source src="/assets/bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="h-[80vh] mt-[27vh] md:mt-[90vh] md:h-[60vh] absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10" > </div>
       {/* 🌌 Optional overlay for better contrast */}
       <div className="absolute inset-0 bg-black/40 z-0" />
 
@@ -169,28 +167,28 @@ const section3TextRef = useRef<HTMLParagraphElement>(null);
           </button>
         </section>
 
-        <section className="snap-start flex px-6 py-20 sm:py-32 mx-auto min-h-screen ml-5">
-          <h1 ref={section01Ref} className=" font-bold mb-6 text-[400px] leading-0">01</h1>
-          <div className="flex flex-col justify-center ml-[5vw]">
+        <section className="snap-start flex px-6 py-20 sm:py-32 mx-auto min-h-[40vh] ml-5">
+          <h1 ref={section01Ref} className="text-[16vw] font-bold mb-6 md:text-[400px] leading-0">01</h1>
+          <div className="md:pt-[10vh] flex flex-col ml-[5vw]">
           <p ref={section1TitleRef} className=" text-gray-300 leading-snug ml-5 text-[4vw]">
             OTB is a platform designed to help you understand yourself better through personalized questionnaires and insights.</p>
             <p ref={section1TextRef}  className="text-lg text-gray-300 max-w-xl ml-5 mt-5">
             This platoform provides you to find the best way to learn and understand anything you want.</p>
         </div>
         </section>
-        <section className="snap-start flex px-6 py-20 sm:py-32 mx-auto min-h-screen ml-5">
-          <div className="flex flex-col justify-center">
+        <section className="snap-start flex px-6 py-20 sm:py-32 mx-auto min-h-[40vh ml-5">
+          <div className="md:pt-[10vh] flex flex-col">
           <p ref={section2TitleRef} className=" text-gray-300 leading-snug ml-5 text-[4vw]">
             OTB is a platform that understands your way of thinking and learning to get the best results.</p>
             <p ref={section2TextRef}  className="text-lg text-gray-300 max-w-xl ml-5 mt-5">
             With the help of ai analysis you can inprove find way set goals and get a blueprint, roadmap to your goals.</p>
         </div>
-        <h1 ref={section02Ref} className=" font-bold mb-6 text-[400px] leading-0">02</h1>
+        <h1 ref={section02Ref} className="text-[16vw] font-bold mb-6 md:text-[400px] leading-0">02</h1>
         </section>
 
-        <section className="snap-start flex px-6 py-20 sm:py-32 mx-auto min-h-screen ml-5">
-          <h1 ref={section03Ref} className=" font-bold mb-6 text-[400px] leading-0">03</h1>
-          <div className="flex flex-col justify-center ml-[5vw]">
+        <section className="snap-start flex px-6 py-20 sm:py-32 mx-auto min-h-[40vh] ml-5">
+          <h1 ref={section03Ref} className=" text-[16vw] font-bold mb-6 md:text-[400px] leading-0">03</h1>
+          <div className="md:pt-[10vh] flex flex-col ml-[5vw]">
           <p ref={section3TitleRef} className=" text-gray-300 leading-snug ml-5 text-[4vw]">
             OTB is a platform designed to help people who are unable or find difficult to learn effectively.</p>
             <p ref={section3TextRef} className="text-lg text-gray-300 max-w-xl ml-5 mt-5">
@@ -198,6 +196,34 @@ const section3TextRef = useRef<HTMLParagraphElement>(null);
         </div>
         </section>
       </div>
+      
+      {/* Footer Section */}
+      <footer className="relative z-10 bg-[#1c1c1c] text-white py-12 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Out Of The Box</h3>
+            <p className="text-gray-400">Discover your learning style and unlock your potential.</p>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li><a href="#" className="hover:text-white">About</a></li>
+              <li><a href="#" className="hover:text-white">Features</a></li>
+              <li><a href="#" className="hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Connect</h4>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white">Twitter</a>
+              <a href="#" className="text-gray-400 hover:text-white">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Out Of The Box. All rights reserved.</p>
+        </div>
+      </footer>
       </>
 
       {/* ✨ Background Twinkling Stars */}
@@ -234,7 +260,10 @@ const section3TextRef = useRef<HTMLParagraphElement>(null);
       `}</style>
 
     </div>
+    
   );
+  
 };
+
 
 export default LandingPage;
